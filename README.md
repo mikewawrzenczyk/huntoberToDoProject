@@ -1,7 +1,12 @@
 # Adding Functionality For 100Devs Group Project
 -Add date picker functionality for DUE BY date for each task
--Create some kind of reminder-notification functionality to remind you X amount of time before DUE DATE
--Make prettier?
+- Create some kind of reminder- notification functionality to remind you X amount of time before DUE DATE
+- Make prettier?
+
+# Progress
+- edited todos.ejs view to include a date picker field and display on the render
+- edited todos.js model to include date
+- edited  todos.js controller and added date to the createTodo: async function
 
 # Introduction
 
