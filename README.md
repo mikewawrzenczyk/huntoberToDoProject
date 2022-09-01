@@ -1,7 +1,11 @@
 # Adding Functionality For 100Devs Group Project
--Add date picker functionality for DUE BY date for each task
+- Add date picker functionality for DUE BY date for each task
 - Create some kind of reminder- notification functionality to remind you X amount of time before DUE DATE
 - Make prettier?
+- Make website mobile responsive
+- Ability for users to edit to do items
+- Ability for items to be sorted by due date
+- Option for users to choose between light or dark mode
 
 # Progress
 - edited todos.ejs view to include a date picker field and display on the render
