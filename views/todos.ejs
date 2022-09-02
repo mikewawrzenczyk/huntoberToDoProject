@@ -6,35 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
     <section class="todo-container">
     <h1>Todo list for <%= user.userName %> </h1>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Edit your todo item</p>
+        <form action="/todos/edit" method='PUT'>
+          <input type="text"  name='todoItemModal' placeholder="pretest" id="todoItemModal">
+          <input type="date" value="" name="todoDateModal" id="todoDateModal" min="2022-07-31" max="2025-12-31">
+          <button type="submit">Update</button>
+        </form>
+        </div>
+      
+      </div>
+    <section class="addItems">
+        <form action="/todos/createTodo" method='POST'>
+            <span>Add item</span>
+            <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+            <span>Due Date:</span>
+            <input type="date" name="todoDate" min="2022-07-31" max="2025-12-31">
+            <input type="submit">
+            
+        </form>
+    </section>
     
-    <ul >
+    <ul>
     <% todos.forEach( el => { %>
             <li class='todoItem todo-list-item' data-id='<%=el._id%>'>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <input type="date" class='date' name="todo-date-display" value='<%= el.date%>' min="2022-07-31" max="2025-12-31">
-                <span class='del'> Delete </span>
+                <span>Due date:</span>
+                <span id = "date" class='date <%= el.completed === true ? 'completed' : 'not'%>' ><%= el.date%></span>
+                <span class="edit fas fa-edit"></span>
+                <span class='del fas fa-times'></span>
             </li>
+            <hr />
     <% }) %>    
     </ul>
 
     <h2><%= user.userName %> has <%= left %> things left to do.</h2>
 
-
-
-<section class="addItems">
-    <form action="/todos/createTodo" method='POST'>
-        <span>Add item</span>
-        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-        <span>Due Date:</span>
-        <input type="date" name="todoDate" min="2022-07-31" max="2025-12-31">
-        <input type="submit">
-        
-    </form>
-</section>
 </section>
 
     <a href="/logout">Logout</a>
