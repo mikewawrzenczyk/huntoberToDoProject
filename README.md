@@ -1,7 +1,7 @@
 # Adding Functionality For 100Devs Group Project
 - Add date picker functionality for DUE BY date for each task
 - Create some kind of reminder- notification functionality to remind you X amount of time before DUE DATE
-- Make prettier?
+- Make prettier? (fix Logout on the todos.ejs, format the login.ejs, signup.ejs and index.ejs still needed)
 - Make website mobile responsive
 - Ability for users to edit to do items
 - Ability for items to be sorted by due date
