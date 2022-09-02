@@ -58,7 +58,7 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 
 
--------------------------- this needs to be done ----------------------------
+-------------------------- things that need to be done ----------------------------
 - add put route for update button in Modal with info from modal -> lead to a get request to reload page
 - pass the data_id to the modal (this.parent node stuff)
 - goes to database with an update
