@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Todos</h1>
-    <ul>
+    <section class="todo-container">
+    <h1>Todo list for <%= user.userName %> </h1>
+    
+    <ul >
     <% todos.forEach( el => { %>
-            <li class='todoItem' data-id='<%=el._id%>'>
+            <li class='todoItem todo-list-item' data-id='<%=el._id%>'>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
                 <input type="date" class='date' name="todo-date-display" value='<%= el.date%>' min="2022-07-31" max="2025-12-31">
                 <span class='del'> Delete </span>
@@ -21,13 +23,19 @@
 
     <h2><%= user.userName %> has <%= left %> things left to do.</h2>
 
+
+
+<section class="addItems">
     <form action="/todos/createTodo" method='POST'>
+        <span>Add item</span>
         <input type="text" placeholder="Enter Todo Item" name='todoItem'>
         <span>Due Date:</span>
         <input type="date" name="todoDate" min="2022-07-31" max="2025-12-31">
         <input type="submit">
         
     </form>
+</section>
+</section>
 
     <a href="/logout">Logout</a>
 
