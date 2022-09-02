@@ -1,5 +1,5 @@
 # Adding Functionality For 100Devs Group Project
-- Add date picker functionality for DUE BY date for each task
+
 - Create some kind of reminder- notification functionality to remind you X amount of time before DUE DATE
 - Make prettier? (fix Logout on the todos.ejs, format the login.ejs, signup.ejs and index.ejs still needed)
 - Make website mobile responsive
@@ -11,6 +11,7 @@
 - edited todos.ejs view to include a date picker field and display on the render
 - edited todos.js model to include date
 - edited  todos.js controller and added date to the createTodo: async function
+- Add date picker functionality for DUE BY date for each task
 
 # Introduction
 
@@ -56,3 +57,9 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
  Have fun testing and improving it! 😎
 
 
+
+-------------------------- this needs to be done ----------------------------
+- add put route for update button in Modal with info from modal -> lead to a get request to reload page
+- pass the data_id to the modal (this.parent node stuff)
+- goes to database with an update
+- style Login page, sign up page etc.
