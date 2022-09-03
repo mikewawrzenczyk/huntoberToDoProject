@@ -63,3 +63,4 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 - pass the data_id to the modal (this.parent node stuff)
 - goes to database with an update
 - style Login page, sign up page etc.
+- need to add the data-id to the submit button to pass to the server. 
