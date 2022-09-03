@@ -148,3 +148,55 @@ hr {
 .logout-button:hover {
     opacity: 0.55;
   }
+
+  .landing{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    height:100vh;
+    width:80vw;
+    margin:auto;
+  }
+
+  .button {
+    background: rgba(48, 44, 44, .3);
+    border: 2px;
+    border-radius: 5px;
+    padding: 3px 12px;
+    margin: 5px;
+    
+  }
+
+  a, a:visited, a:hover, a:active{
+    text-decoration: none;
+    color: rgb(78, 78, 79);
+    font-size: 20px;
+  }
+
+  .landing > form > input ,  #submitButton, .landing > form > input:active{
+    height: 25px;
+    margin: 3px;
+    background-color: rgb(78, 78, 79);
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+  }
+
+  ::placeholder  {
+    color:rgb(146, 146, 146);
+  }
+
+  #submitButton {
+    color:rgb(146, 146, 146);
+    padding: 0 20px;
+  }
+
+  .landing > form {
+    display: flex;
+    flex-direction: column;
+  }
+

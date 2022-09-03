@@ -79,6 +79,8 @@ function popupModal(){
     modal.style.display = "block";
 
     //populate modal with div content
-    document.getElementById("todoItemModal").setAttribute("placeholder", this.parentNode.childNodes[1].innerText)
-    document.getElementById("todoDateModal").setAttribute("value", this.parentNode.childNodes[5].innerText)
+    // document.getElementById("todoItemModal").setAttribute("placeholder", this.parentNode.childNodes[1].innerText)
+    // document.getElementById("todoDateModal").setAttribute("value", this.parentNode.childNodes[5].innerText)
+    document.getElementById("todoItemModal").setAttribute("placeholder", this.dataset.todo)
+    document.getElementById("todoDateModal").setAttribute("value", this.dataset.date)
 }

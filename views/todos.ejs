@@ -18,7 +18,6 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-          <span class="close">&times;</span>
           <p>Edit your todo item</p>
         <form action="/todos/edit" method='PUT'>
           <input type="text"  name='todoItemModal' placeholder="pretest" id="todoItemModal">
@@ -45,7 +44,7 @@
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
                 <span>Due date:</span>
                 <span id = "date" class='date <%= el.completed === true ? 'completed' : 'not'%>' ><%= el.date%></span>
-                <span class="edit fas fa-edit"></span>
+                <span class="edit fas fa-edit" data-id="<%=el._id%>" data-todo="<%= el.todo %>" data-date="<%= el.date%>"></span>
                 <span class='del fas fa-times'></span>
             </li>
             <hr />
