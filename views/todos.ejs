@@ -13,7 +13,7 @@
 </head>
 <body>
     <section class="todo-container">
-    <h1>Todo list for <%= user.userName %> </h1>
+    <h1>Hi <%= user.userName %>, here's your todo list </h1>
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
@@ -52,11 +52,11 @@
     <% }) %>    
     </ul>
 
-    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+    <h3 class="remaining-items">Remaining Items: <span><%= left %></span></h2>
 
 </section>
 
-    <a href="/logout">Logout</a>
+    <a class="logout-button" href="/logout">Logout</a>
 
     <script src="js/main.js"></script>
 </body>
