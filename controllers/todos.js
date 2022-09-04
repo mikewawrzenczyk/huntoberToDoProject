@@ -44,16 +44,21 @@ module.exports = {
     },
     //needs work
     edit: async (req, res)=>{
+        console.log('REq')
+        console.log('date: ', req.body.dateFromJS, 'id: ', req.body.todoIdFromJSFile, 'todoItem: ', req.body.todoItemFromJS)
         try{
             await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
-                completed: true
+                completed: false,
+                date : req.body.dateFromJS,
+                todo: req.body.todoItemFromJS
             })
-            console.log('Marked Complete')
-            res.json('Marked Complete')
+            console.log('Item has been edited')
+            res.json('Item has been edited')
         }catch(err){
             console.log(err)
         }
     },
+
     deleteTodo: async (req, res)=>{
         console.log(req.body.todoIdFromJSFile)
         try{

@@ -75,12 +75,38 @@ async function markIncomplete(){
 
 function popupModal(){
     // Get the modal
-    const modal = document.getElementById("myModal");
+    const modal = document.getElementById("myModal"),
+        updateButton = document.getElementById("updateButton"),
+        date = document.getElementById("todoDateModal"),
+        todoItem = document.getElementById("todoItemModal")
     modal.style.display = "block";
+    todoItem.setAttribute("placeholder", this.dataset.todo)
+    date.setAttribute("value", this.dataset.date)
+    updateButton.setAttribute("data-id", this.dataset.id)
+    updateButton.addEventListener('click', update)
+    console.log(todoItem.getAttribute('placeholder'))
+}
+async function update(){
 
-    //populate modal with div content
-    // document.getElementById("todoItemModal").setAttribute("placeholder", this.parentNode.childNodes[1].innerText)
-    // document.getElementById("todoDateModal").setAttribute("value", this.parentNode.childNodes[5].innerText)
-    document.getElementById("todoItemModal").setAttribute("placeholder", this.dataset.todo)
-    document.getElementById("todoDateModal").setAttribute("value", this.dataset.date)
+    const todoId = this.dataset.id,
+        todoItemElement = document.getElementById("todoItemModal")
+        date = document.getElementById("todoDateModal").value
+    let todoItem = todoItemElement.value || todoItemElement.getAttribute('placeholder');
+    console.log(date,todoItem,todoId)
+    try{
+        const response = await fetch('todos/edit', {
+            method: 'put',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                'todoIdFromJSFile': todoId,
+                'dateFromJS' : date,
+                'todoItemFromJS' : todoItem
+            })
+        })
+        const data = await response.json()
+        console.log(data)
+        location.reload()
+    }catch(err){
+        console.log(err)
+    }
 }
