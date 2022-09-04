@@ -89,7 +89,7 @@ function popupModal(){
 async function update(){
 
     const todoId = this.dataset.id,
-        todoItemElement = document.getElementById("todoItemModal")
+        todoItemElement = document.getElementById("todoItemModal"),
         date = document.getElementById("todoDateModal").value
     let todoItem = todoItemElement.value || todoItemElement.getAttribute('placeholder');
     console.log(date,todoItem,todoId)
