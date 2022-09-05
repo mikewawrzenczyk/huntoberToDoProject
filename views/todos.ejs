@@ -62,7 +62,10 @@
 
     </table>
     <ul>
-    <!-- <% todos.forEach( el => { %>
+    <!-- 
+        ------------put all of this in a table as it should render better under most circumstances-------------------
+
+        <% todos.forEach( el => { %>
             <li class='todoItem todo-list-item' data-id='<%=el._id%>'>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
                 <span>Due date:</span>
@@ -72,7 +75,13 @@
             </li>
             <hr />
     <% }) %>    
-    </ul> -->
+    </ul> 
+
+
+------------put all of this in a table as it should render better under most circumstances-------------------
+
+
+-->
 
     <h3 class="remaining-items">Remaining Items: <span><%= left %></span></h2>
 
