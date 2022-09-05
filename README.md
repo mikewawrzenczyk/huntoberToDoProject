@@ -60,7 +60,7 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 -------------------------- things that need to be done ----------------------------
 - add put route for update button in Modal with info from modal -> lead to a get request to reload page
-- pass the data_id to the modal (this.parent node stuff)
-- goes to database with an update
-- style Login page, sign up page etc.
-- need to add the data-id to the submit button to pass to the server. 
+- When the list gets long, the form begins to go off the page. This, I believe, has to do with the position absolute of the .todo-container. If you add to many items, it will make the form inaccessible as it will be off the page. 
+
+
+

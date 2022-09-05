@@ -36,8 +36,33 @@
         </form>
     </section>
     
+    <table>
+        <tr>
+            <th>Todo Item</th>
+            <th>Due Date</th>
+
+        </tr>
+
+        <% todos.forEach( el => { %>
+        <tr>
+            <td class='todoItem todo-list-item' data-id='<%=el._id%>'>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+            </td>
+            <td>
+                <span class='date <%= el.completed === true ? 'completed' : 'not'%>' ><%= el.date%></span>
+            </td>
+            <td>
+                <span class="edit fas fa-edit" data-id="<%=el._id%>" data-todo="<%= el.todo %>" data-date="<%= el.date%>"></span>
+            </td>
+            <td>
+                <span class='del fas fa-times' data-id="<%=el._id%>"></span>
+            </td>
+        </tr>
+       <% }) %>
+
+    </table>
     <ul>
-    <% todos.forEach( el => { %>
+    <!-- <% todos.forEach( el => { %>
             <li class='todoItem todo-list-item' data-id='<%=el._id%>'>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
                 <span>Due date:</span>
@@ -47,7 +72,7 @@
             </li>
             <hr />
     <% }) %>    
-    </ul>
+    </ul> -->
 
     <h3 class="remaining-items">Remaining Items: <span><%= left %></span></h2>
 

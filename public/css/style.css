@@ -35,7 +35,7 @@ h1{
     position: absolute;
     top: 50%;
     left: 50%;
-    max-width: 700px;
+    max-width: 70%;
     padding: 40px;
     transform: translate(-50%, -50%);
     background-color: rgba(175, 175, 175, 0.545);
@@ -45,6 +45,7 @@ h1{
     align-items: center;
     text-decoration: none;
     font-size: large;
+    margin-top: 5em;
 }
 
 .addItems {
@@ -68,10 +69,12 @@ form{
     border: 1px grey solid;
     border-radius: 5px;
     background-color: rgba(113, 113, 113, 0.3);
+    /* width:75%; */
     display: flex;
-    flex-direction: row;
 }
-
+.date{
+  width:20em;
+}
 li span{
     padding-right: 10px;
 }
@@ -88,6 +91,7 @@ hr {
 .fas{
     font-size: large;
     text-decoration: none;
+    padding: 0;
 }
 
 .remaining-items{
@@ -210,3 +214,8 @@ hr {
   width: 100%;
   margin: .2em 0;
 }
+
+td{
+  padding: 0 .5em;
+}
+
