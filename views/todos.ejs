@@ -18,20 +18,20 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-          <p>Edit your todo item</p>
-          <input type="text"  name='todoItemModal' placeholder="pretest" id="todoItemModal">
-          <input type="date" value="" name="todoDateModal" id="todoDateModal" min="2022-07-31" max="2025-12-31">
-          <button id="updateButton">Update</button>
+                <h2>Edit your todo item</h2>
+                <input type="textarea"  placeholder="pretest" class="form" id="todoItemModal">
+                <input type="date" value=""  min="2022-07-31" max="2025-12-31" class="form" id="todoDateModal">
+                <button class="form" id="updateButton">Update</button>
         </div>
       
       </div>
     <section class="addItems">
         <form action="/todos/createTodo" method='POST'>
-            <span>Add item</span>
-            <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-            <span>Due Date:</span>
-            <input type="date" name="todoDate" min="2022-07-31" max="2025-12-31">
-            <input type="submit">
+            <label>Add item:</label>
+            <input type="text" placeholder="Enter Todo Item" name='todoItem' class="form">
+            <label>Due Date:</label>
+            <input type="date" name="todoDate" min="2022-07-31" max="2025-12-31" class="form">
+            <input type="submit" class="form">
             
         </form>
     </section>
