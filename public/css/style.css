@@ -62,7 +62,7 @@ h1{
     width: 100%;
     background-color: rgb(146, 146, 146);
     color: black;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 form{
