@@ -5,7 +5,6 @@
 }
 
 body{
-    /* background-color: darkblue;  */
     background-image: url('https://images.unsplash.com/photo-1512386233331-f023884a92e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1195&q=80');
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -15,33 +14,33 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* /todos page */
 h1{
     color: rgb(78, 78, 79);
     padding-bottom: 20px;
     text-transform: capitalize;
-}
+} 
+
 .completed{
     text-decoration: line-through;
     color: gray;
     cursor: pointer;
 }
+
 .not{
     text-decoration: underline;
     cursor: pointer;
 }
 
-.todo-container {
-    /* border: 10px black solid; */
+.todo-container{
     color: rgb(45, 45, 45);
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     max-width: 70%;
     min-width: 50vw;
     padding: 40px;
     transform: translate(-50%, -50%);
-    background-color: rgba(175, 175, 175, 0.545);
+    background-color: rgba(192, 192, 192, 0.694);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -51,21 +50,20 @@ h1{
     margin-top: 5em;
 }
 
-.addItems {
+.addItems{
     margin: 2px;
     padding: 5px;
     border-radius: 5px;
-    /* border: black solid 2px; */
     width: 100%;
     background-color: rgb(146, 146, 146);
     color: black;
     cursor: pointer;
 }
+
 form{
     display: flex;
     justify-content: space-around;
 }
-
 
 .todo-list-item {
     padding: 10px;
@@ -73,12 +71,13 @@ form{
     border: 1px grey solid;
     border-radius: 5px;
     background-color: rgba(113, 113, 113, 0.3);
-    width:70%;
-    
+    width:70%;  
 }
+
 .date{
   width:20em;
 }
+
 li span{
     padding-right: 10px;
 }
@@ -89,7 +88,7 @@ hr {
 
 .del{
     padding-left: 10px;
-    color: brown;
+    color: rgba(165, 42, 42, 0.71);
 }
 
 .fas{
@@ -101,12 +100,11 @@ hr {
 .remaining-items{
     padding: 10px;
     font-weight: 700;
-    color: #e44b4bc7;
+    color: rgba(165, 42, 42, 0.71);
 }
 
-
  /* The Modal (background) */
- .modal {
+.modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -117,10 +115,10 @@ hr {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+}
   
-  /* Modal Content/Box */
-  .modal-content, .addItems>form{
+/* Modal Content/Box */
+.modal-content, .addItems>form{
     display:flex;
     align-items: stretch;
     justify-content: center;
@@ -130,88 +128,72 @@ hr {
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
-  }
+}
 
-  .modal-content > h2{
+.modal-content > h2{
     margin-left: 1.4rem;
     text-transform: capitalize;
     align-self: center;
-  }
-
-  /* Logout Button */
-
-.logout-button{
-    font-size: 1em;
-    font-family: 'Oswald', sans-serif;
-    text-decoration: none;
-    letter-spacing: 3px;
-    padding: 0.5em;
-    position: relative;
-    top: 15px;
-    right: -18px;
-    bottom: -4px;
-    overflow: hidden;
-    background-color: rgb(65, 65, 65);
-    border-radius: 10%;
-    color: white;
-    /* transition: opacity .45s;
-    -webkit-transition: opacity .35s; */
 }
 
-.logout-button:hover {
-    opacity: 0.55;
-  }
 
-  .landing{
+.landing{
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  main {
+main{
     height:100vh;
     width:80vw;
     margin:auto;
-  }
+}
 
-  .button {
+.button{
     background: rgba(48, 44, 44, .3);
     border: 2px;
     border-radius: 5px;
     padding: 3px 12px;
-    margin: 5px;
-    
-  }
+    margin: 5px;    
+}
 
-  a, a:visited, a:hover, a:active{
+a, a:visited, a:hover, a:active{
     text-decoration: none;
     font-size: 20px;
-  }
+}
 
-  .landing > form > input ,  #submitButton, .landing > form > input:active, .form, .button{
+.landing > form > input ,  #submitButton, .landing > form > input:active, .form, .button{
     height: 35px;
     margin: 3px;
     background-color: rgb(78, 78, 79);
     border-radius: 5px;
     text-align: center;
     border: none;
+    font-size: 15px;
+    padding: 10px 15px;
+}
+  
+#submitButton{
+    margin-top: 1rem;
+    color: #888;
+}
+
+#todo-form{
     font-size: 20px;
     cursor: pointer;
     color: white;
-  }
-  #todo-form{
     width: 100%;
-  }
-  ::placeholder  {
+}
+  
+::placeholder  {
     color:rgb(146, 146, 146);
-  }
+}
 
-
-  .landing > form {
+.landing > form {
     display: flex;
     flex-direction: column;
-  }
+}
 
 .addItems > form {
   width: 100%;
@@ -221,11 +203,54 @@ hr {
 td{
   padding: .5em 2em;
 }
+
 td+td+td {
   padding: .5em .5em;
 }
+
 .index-button{
   width: 10em;
+}
+
+.index-h1{
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 4px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2em;
+    color: rgb(251, 251, 251);
+    background: rgba(32, 39, 20, 0.44);
+    border: 2px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    padding: 20px;
+    text-transform: capitalize;
+}
+
+.index-p{
+    font-size: 1em;
+    text-transform: capitalize;
+    padding: 1em;
+    font-style: italic;
+}
+
+.logout-button{
+    font-size: 1em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 3px;
+    padding: 0.5em;
+    position: relative;
+    margin: 1rem;
+    float: right;
+    overflow: hidden;
+    background: rgb(214, 214, 214);
+    border-radius: 10%;
+}
+
+.logout-button:hover {
+    opacity: 0.55;
 }
 
 .fas {
