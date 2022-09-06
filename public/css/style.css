@@ -24,9 +24,11 @@ h1{
 .completed{
     text-decoration: line-through;
     color: gray;
+    cursor: pointer;
 }
 .not{
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .todo-container {
@@ -57,6 +59,7 @@ h1{
     width: 100%;
     background-color: rgb(146, 146, 146);
     color: black;
+    cursor: pointer;
 }
 form{
     display: flex;
@@ -183,7 +186,6 @@ hr {
 
   a, a:visited, a:hover, a:active{
     text-decoration: none;
-    color: rgb(78, 78, 79);
     font-size: 20px;
   }
 
@@ -195,7 +197,8 @@ hr {
     text-align: center;
     border: none;
     font-size: 20px;
-    
+    cursor: pointer;
+    color: white;
   }
   #todo-form{
     width: 100%;
@@ -224,3 +227,8 @@ td+td+td {
 .index-button{
   width: 10em;
 }
+
+.fas {
+  cursor: pointer;
+}
+ 
