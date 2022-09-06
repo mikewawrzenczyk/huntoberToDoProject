@@ -36,6 +36,7 @@ h1{
     top: 50%;
     left: 50%;
     max-width: 70%;
+    min-width: 50vw;
     padding: 40px;
     transform: translate(-50%, -50%);
     background-color: rgba(175, 175, 175, 0.545);
@@ -69,8 +70,8 @@ form{
     border: 1px grey solid;
     border-radius: 5px;
     background-color: rgba(113, 113, 113, 0.3);
-    /* width:75%; */
-    display: flex;
+    width:70%;
+    
 }
 .date{
   width:20em;
@@ -186,7 +187,7 @@ hr {
     font-size: 20px;
   }
 
-  .landing > form > input ,  #submitButton, .landing > form > input:active, .form {
+  .landing > form > input ,  #submitButton, .landing > form > input:active, .form, .button{
     height: 35px;
     margin: 3px;
     background-color: rgb(78, 78, 79);
@@ -194,16 +195,15 @@ hr {
     text-align: center;
     border: none;
     font-size: 20px;
+    
   }
-
+  #todo-form{
+    width: 100%;
+  }
   ::placeholder  {
     color:rgb(146, 146, 146);
   }
 
-  #submitButton {
-    color:rgb(146, 146, 146);
-    padding: 0 20px;
-  }
 
   .landing > form {
     display: flex;
@@ -212,10 +212,15 @@ hr {
 
 .addItems > form {
   width: 100%;
-  margin: .2em 0;
+  margin: 1em 0;
 }
 
 td{
-  padding: 0 .5em;
+  padding: .5em 2em;
 }
-
+td+td+td {
+  padding: .5em .5em;
+}
+.index-button{
+  width: 10em;
+}

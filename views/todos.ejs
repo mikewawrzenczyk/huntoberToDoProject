@@ -26,16 +26,18 @@
       
       </div>
     <section class="addItems">
-        <form action="/todos/createTodo" method='POST'>
+        <form action="/todos/createTodo" method='POST' >
             <label>Add item:</label>
             <input type="text" placeholder="Enter Todo Item" name='todoItem' class="form">
             <label>Due Date:</label>
             <input type="date" name="todoDate" min="2022-07-31" max="2025-12-31" class="form">
-            <input type="submit" class="form">
+            <input type="submit" id="submitButton" value="Add To-Do Item">
             
         </form>
     </section>
-    
+    <% if(todos.length === 0){ %> 
+        <h2 class="remaining-items">Please enter a to-do item above</h2> 
+        <% } else { %>
     <table>
         <tr>
             <th>Todo Item</th>
@@ -58,7 +60,7 @@
                 <span class='del fas fa-times' data-id="<%=el._id%>"></span>
             </td>
         </tr>
-       <% }) %>
+       <% })} %>
 
     </table>
     <ul>
