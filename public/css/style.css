@@ -14,6 +14,11 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.hover{
+  cursor: pointer;
+  color: white;
+}
+
 h1{
     color: rgb(78, 78, 79);
     padding-bottom: 20px;
@@ -95,6 +100,7 @@ hr {
     font-size: large;
     text-decoration: none;
     padding: 0;
+    cursor: pointer;
 }
 
 .remaining-items{
@@ -156,6 +162,7 @@ main{
     border-radius: 5px;
     padding: 3px 12px;
     margin: 5px;    
+    cursor: pointer;
 }
 
 a, a:visited, a:hover, a:active{
@@ -172,11 +179,11 @@ a, a:visited, a:hover, a:active{
     border: none;
     font-size: 15px;
     padding: 10px 15px;
+    color: white;
 }
   
 #submitButton{
     margin-top: 1rem;
-    color: #888;
 }
 
 #todo-form{
@@ -247,13 +254,10 @@ td+td+td {
     overflow: hidden;
     background: rgb(214, 214, 214);
     border-radius: 10%;
+    /* cursor: pointer; */
 }
 
 .logout-button:hover {
     opacity: 0.55;
 }
 
-.fas {
-  cursor: pointer;
-}
- 
