@@ -23,10 +23,12 @@ h1{
 .completed{
     text-decoration: line-through;
     color: gray;
+    cursor: pointer;
 }
 
 .not{
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .todo-container{
@@ -55,6 +57,7 @@ h1{
     width: 100%;
     background-color: rgb(146, 146, 146);
     color: black;
+    cursor: pointer;
 }
 
 form{
@@ -157,7 +160,6 @@ main{
 
 a, a:visited, a:hover, a:active{
     text-decoration: none;
-    color: rgb(78, 78, 79);
     font-size: 20px;
 }
 
@@ -178,6 +180,9 @@ a, a:visited, a:hover, a:active{
 }
 
 #todo-form{
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
     width: 100%;
 }
   
@@ -247,3 +252,8 @@ td+td+td {
 .logout-button:hover {
     opacity: 0.55;
 }
+
+.fas {
+  cursor: pointer;
+}
+ 
